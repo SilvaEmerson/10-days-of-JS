@@ -1,6 +1,4 @@
 
-const {log} = console;
-
 class Rectangle {
     constructor(w, h) {
         this.w = w;
@@ -8,12 +6,12 @@ class Rectangle {
     }
 }
 
-Rectangle.prototype.area = function () {
+Rectangle.prototype.area = function() {
     return this.w * this.h;
 };
 
-class Square extends Rectangle{
-    constructor(l){
+class Square extends Rectangle {
+    constructor(l) {
         super(l, l);
     }
 }
@@ -22,7 +20,7 @@ class Square extends Rectangle{
 const calcS = (p, a, op) => {
     let square = Math.sqrt(p * p - 16 * a);
 
-    return op === "-" ? (p - square)/4 : (p + square)/4;
+    return op === '-' ? (p - square)/4 : (p + square)/4;
 };
 
 function sides(literals, ...expressions) {
@@ -35,7 +33,7 @@ function sides(literals, ...expressions) {
 }
 
 function modifyArray(nums) {
-    let newNums = nums.map(val => {
+    let newNums = nums.map((val) => {
         return val % 2 == 0 ? val * 2 : val * 3;
     });
 
