@@ -12,5 +12,7 @@ const regexVarMr = () => {
     return re;
 };
 
+const regexRealNumber = () => new RegExp('\\d+', 'gim');
+
 let str = 'e .';
 console.log(str.match(regexVarMr()));
